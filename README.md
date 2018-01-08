@@ -1,2 +1,4 @@
 # welcometoslothicorn
-a portal into magic. welcome to slothicorn.
+a portal into magic. 
+
+Slothicorn Has Just Been Born on a Slice of Pizza
