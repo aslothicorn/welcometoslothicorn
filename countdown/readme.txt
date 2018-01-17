@@ -1,0 +1,1 @@
+Slothicorn images by Fluffywiggle. https://steemit.com/slothicorn/@fluffywiggle/kawaii-crypto-slothicorn
