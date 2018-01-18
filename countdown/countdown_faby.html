@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<!-- Original source: https://www.w3schools.com/howto/howto_js_countdown.asp -->
+
+<html>
+<head>
+<title>welcome to slothicorn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+body{
+  background:#7bff93;
+  font-family: Pacifico;}
+p.class {
+  position: absolute;
+  top: 60%;
+  font-size: 70px;
+  left:50%;
+  margin-left:-275px;
+}
+
+div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.display {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#demo{
+  background:rgba(85, 178, 72, .2);
+  border-radius:10px;
+  padding:10px 50px;
+  border:#FF81D6 10px dotted;
+  width:450px;
+  text-align:center;
+  color:#fff;
+  box-shadow: 0 0 10px #FFF;
+  transition:all 1s;
+}
+#demo:hover{
+  box-shadow: 0 0 50px #FFF;
+}
+
+#demo span{font-size:30px; font-family:verdana; color:#55B248;}
+
+</style>
+</head>
+<body>
+
+	<div>
+		<p class="class" id="demo"></p>
+
+		<img class="display" src="slothicorn_320px.png">
+	</div>
+
+
+	<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Mar 20, 2018 08:00:00").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "<span>D</span> " + hours + "<span>H</span> "
+    + minutes + "<span>M</span> " + seconds + "<span>S</span> ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+	}, 1000);
+	</script>
+
+</body>
+</html>
